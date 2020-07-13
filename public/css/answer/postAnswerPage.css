@@ -1,0 +1,423 @@
+/*hina.ccsをカスタマイズ*/
+.containerPerPage{
+    width: 100%;
+    font-size: 130%;
+  }
+  
+  .side_bar{
+    display: none;
+  }
+
+  .question{
+    word-break: break-all;
+  }
+
+/*
+**ページオリジナル
+**@質問画面：ユーザーが質問を記入する。
+*/
+textarea {
+    width: 94%;    
+    height: 230px;
+    font-size:18px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+
+
+.title{
+margin-top:30px;
+margin-left: 3%;
+margin-right: 3%;
+border-left: 3px solid green;
+padding-left: 10px;
+}
+
+.user_name{
+margin-top:30px;
+margin-left: 3%;
+margin-right: 3%;
+border-left: 3px solid green;
+padding-left: 10px;
+}
+
+.category_wrap{
+    margin-top: 30px;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-left: 3px solid green ;
+    padding-left: 10px;
+}
+
+
+.answer_detail p{
+    margin-left: 3%;
+    margin-right: 3%;
+    border-left: 3px solid green ;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.question_content{
+    margin-top: 30px;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-left: 3px solid green ;
+    padding-left: 10px;
+}
+
+/*ポップアップ*/
+.modal{
+	display: none;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.modal__bg{
+	background: rgba(0,0,0,0.7);
+	height: 100vh;
+	position: absolute;
+	width: 100%;
+}
+.modal__content{
+	background: #fff;
+	left: 50%;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%);
+    width: 60%;
+    font-size: 120%;
+    text-align: center;
+}
+
+
+
+/*回答投稿ボタン*/
+#postAnswer {
+    opacity: 1;
+    border-radius: 5px;
+    text-align: center;
+    height:20%;
+    width:30%;
+    font-size: 30px;
+    margin:4% 35%;
+    border: 2px solid green;
+    background-color: green;
+    color: white;
+}
+
+#postAnswer:hover{
+    background-color: #E6FFE9;
+    transition: all 0.4s;
+    color: green;
+    border: 2px solid green;
+    font: bold;
+    cursor: pointer;
+}
+
+/*ゲストとして投稿する時の投稿ボタン*/
+
+#postAnswerAsGuest{
+    display: inline-block;
+    text-align: center;
+    opacity: 1;
+    border-radius: 5px;
+    height:20%;
+    width:30%;
+    font-size: 30px;
+    margin-left:15%;
+    background-color: burlywood;
+}
+
+#postAnswerAsGuest:hover{
+    background-color: bisque;
+    transition: all 0.2s; 
+}
+
+/*新規登録へ*/
+#moveToResistration{
+    text-align: center;
+    display: inline-block;
+    opacity: 1;
+    border-radius: 5px;
+    height:20%;
+    width:30%;
+    font-size: 30px;
+    margin-left:10%;
+    background-color: #00AA00;
+}
+#moveToResistration:hover{
+    background-color: #00CC00;
+    transition: all 0.2s; 
+}
+
+.pastAnswerList{
+    margin-top: 10px;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-left: 3px solid green ;
+    padding-left: 10px;
+    font-size: 150%;
+}
+
+
+.pastAnswerListContainer{
+    word-wrap: break-word;
+}
+
+.pastAnswerman{
+    margin-left: 3%;
+    margin-top: 2%;
+    padding-left: 10px;
+    border-left: 3px solid green ;
+}
+
+.pastAnswerContents{
+    margin-left: 3%;
+    margin-top: 2%;
+    padding-left: 10px;
+    border-left: 3px solid green ;
+}
+/*上記のpastAnswerContentsと酷似しているが新着thanksメッセージの中でのpastAnswerContentsの時用*/
+.newPastAnswerContents{
+    margin-left: 3%;
+    margin-top: 2%;
+    padding-left: 10px;
+}
+
+hr {
+    margin-top:    5%;
+    margin-bottom: 5%;
+    height: 20px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #696969 inset;
+  }
+
+.answerContents{
+    margin-left:3%;
+    margin-right:3%;
+    border: 3px solid #778899 ;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    margin-bottom: 1%;
+}
+
+.answerCounter{
+    display: inline-block;
+    position: relative;
+    top:25px;
+    margin-left:3%; margin-top:2%;
+    z-index:10;
+    background-color: darkgrey;
+}
+
+
+/*thanks投稿ボタン*/
+#postThanks{
+    border-radius: 5px;
+    text-align: center;
+    height:20%;
+    width:20%;
+    font-size: 30px;
+    margin-top:0.2%;
+    margin-left:77%;
+    border: 2px solid green;
+    background-color: green;
+    color: white;
+    font: bold;
+}
+
+#postThanks:hover{
+    background-color: #E6FFE9;
+    transition: all 0.4s;
+    color: green;
+    border: 2px solid green;
+    font: bold;
+    cursor: pointer;
+}
+
+.answerForm label{
+    margin-left: 3%;
+    margin-right: 3%;
+    border-left: 3px solid green ;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+/*ユーザーがファイルをドロップした時の表示*/
+#img1{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+/*すでに投稿されている画像の表示*/
+.picture1{
+    margin-top:2%;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-left: 3px solid green;
+    padding-left: 10px;
+}
+
+/*thanks詳細ページのcss START*/ 
+.thanksContainer{
+    word-wrap: break-word;
+    margin-left:3%;
+    margin-right:3%;
+    border: 4px solid #FF6633 ;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    margin-bottom: 1%;
+}
+.thanksMessege{
+    font-size: 100%;
+    margin:2% 3% 0 3%;
+    padding-left: 10px;
+    border-left: 3px solid #FF9999;
+  }
+  /*上記の.thanksMessegeと酷似しているが、こちらは新着thans通知の方の画面でのthanksメッセージ*/
+  .newThanksMessege{
+    font-size: 100%;
+    margin:2% 3% 0 3%;
+    padding-left: 10px;
+  }
+  .thanksFormTextarea{
+      margin-left: 3%;
+  }
+  .thanksFormTitle{
+    font-size: 110%;
+    border-left: 3px solid #FF9999;
+    margin:3% 0 0 3%;
+    padding-left: 10px;
+  }
+/*thanks詳細ページのcss END*/ 
+
+/*画像表示設定*/
+.questionPicture{
+    margin: 0 5% 5% 5%;
+    min-width: 40%;
+    min-height: 300px;
+    max-width: 95%;
+    max-height: 500px;
+    
+}
+/*他の人が誰も回答していない時*/
+.thereIsNoAnswers{
+    border: solid 2px green;
+    margin:  5% 5% 5% 5%;
+    padding: 5% 0;
+    text-align: center;
+    font-size: 150%;
+  }
+.bannerAdvertisingLinkInPc{
+    text-align: center;
+  }
+.bannerAdvertisingLinkInTablet{
+    display: none;
+}
+.bannerAdvertisingLinkInSmartPhone{
+    display: none;
+}
+  
+
+@media all and (max-width: 1300px) {
+
+    .bannerAdvertisingLinkInPc{
+        display: none;
+
+    }
+    .bannerAdvertisingLinkInTablet{
+        display: block;
+        text-align: center;
+    }
+    .bannerAdvertisingLinkInSmartPhone{
+        display: none;
+    }
+    .modal__content{
+        font-size: 105%;        
+    }
+    
+
+  }
+
+
+  /*スマホ*/
+@media all and (max-width: 750px) {
+
+/*スマホの時は写真をアップロードできない。*/
+#file_upload_section{
+    display: none;
+}
+#postAnswerAsGuest{
+    display: inline-block;
+    font-size: 100%;
+    padding: 1% 0 1% 0;
+    
+}
+#moveToResistration{
+    display: inline-block;
+    font-size: 100%;
+    padding: 1% 0 1% 0;
+}
+.bannerAdvertisingLinkInTablet{
+    display: none;
+}
+.bannerAdvertisingLinkInSmartPhone{
+    display: block;
+    text-align: center;
+}
+#postAnswer{
+    text-align: center;
+    height:auto;
+    width:auto;
+    padding: 1% 2% 1% 2%;
+    font-size: 110%;
+}
+
+/*スマホ　thanks投稿ボタン*/
+#postThanks{
+    border-radius: 5px;
+    text-align: center;
+    height:40%;
+    width:35%;
+    font-size: 120%;
+    margin-top:0.2%;
+    margin-left:63%;
+    background-color: green;
+    color: white;
+    font: bold;
+}
+
+#postThanks:hover{
+    background-color: burlywood;
+    transition: all 0.2s;
+}
+.modal__content{
+    width: 90%;
+    font-size: 90%;
+    text-align: center;
+}
+@media all and (max-width: 340px) {
+    #postAnswer{
+        text-align: center;
+        height:auto;
+        width:auto;
+        padding: 1% 2% 1% 2%;
+        font-size: 95%;
+    }
+    #postThanks{
+        width:40%;
+        font-size: 110%;
+        margin-top:0.2%;
+        margin-left:55%;
+        background-color: green;
+        color: white;
+        font: bold;
+    }
+    
+}
+
+
+}
+

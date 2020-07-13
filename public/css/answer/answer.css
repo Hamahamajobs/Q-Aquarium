@@ -1,0 +1,91 @@
+/*
+**ページオリジナル
+**@質問画面：ユーザーが質問を記入する。
+*/
+textarea {
+    width: 100%;
+    height: 230px;
+    font-size:18px;
+}
+
+.title{
+margin-top:30px;
+margin-left: 3%;
+margin-right: 3%;
+border-left: 3px solid green;
+padding-left: 10px;
+}
+
+.user_name{
+margin-top:30px;
+margin-left: 3%;
+margin-right: 3%;
+border-left: 3px solid green;
+padding-left: 10px;
+}
+
+.category_wrap{
+    margin-top: 30px;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-left: 3px solid green ;
+    padding-left: 10px;
+}
+
+
+.answer_detail p{
+    margin-left: 3%;
+    margin-right: 3%;
+    border-left: 3px solid green ;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+.question_content{
+    margin-top: 30px;
+    border-left: 3px solid green ;
+    padding-left: 10px;
+}
+
+/*ポップアップ*/
+.modal{
+	display: none;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.modal__bg{
+	background: rgba(0,0,0,0.7);
+	height: 100vh;
+	position: absolute;
+	width: 100%;
+}
+.modal__content{
+	background: #fff;
+	left: 50%;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 60%;
+}
+
+
+
+/*回答投稿ボタン*/
+#postAnswer {
+    opacity: 1;
+    border-radius: 5px;
+    text-align: center;
+    height:20%;
+    width:30%;
+    font-size: 30px;
+    margin:4% 35%;
+    background-color: beige;
+}
+
+#postAnswer:hover{
+    background-color: burlywood;
+    transition: all 0.2s;
+}
+

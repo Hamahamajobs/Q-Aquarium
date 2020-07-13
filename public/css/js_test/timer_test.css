@@ -1,0 +1,16 @@
+/*
+ul{
+    list-style: none;
+    padding: 0;
+}
+li.message-other {
+    color: aqua;
+}
+*/
+.slider .slider-inner li.show{
+    opacity:1;
+}
+
+.slider .nav li.current {
+background-color: darkolivegreen;
+}

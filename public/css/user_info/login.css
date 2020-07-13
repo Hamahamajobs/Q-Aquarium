@@ -1,0 +1,234 @@
+
+/* 'Open Sans' font from Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+  /*background: #456;*/
+  font-family: 'Open Sans', sans-serif;
+}
+
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: green;
+}
+
+.login-header {
+  background: green;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+.login p {
+  padding: 12px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+}
+
+#id,#password {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+#id:focus,
+#password:focus{
+  border: 1px solid green ;
+  box-shadow: 0 0 4px gray;
+
+}
+
+#submit{
+  background: #009966;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s all ease 0s;
+}
+#btnSignUp{
+  font-size: 140%;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border: solid 4px #668ad8;
+  color: #668ad8;
+  background: #e1f3ff;
+  transition: .4s;
+  /*CSS変化にチャレンジ
+  tramsition + :hoverが基本！
+  ease：インとアウトをなめらかに
+  linear：一定
+  ease-in：ゆっくりイン
+  ease-out：ゆっくりアウト
+  ease-in-out：ゆっくりインしてゆっくりアウト
+  cubic-bezier(値, 値, 値, 値)：独自に設定
+  */
+}
+#submit:hover{
+  background: green;
+}
+
+#btnSignUp:hover{
+  background: #668ad8;
+  color: #FFF;
+}
+
+/*オリジナルコンテンツ*/
+.containerPerPage{
+  width: 100%;
+}
+
+.side_bar{
+  display: none;
+}
+
+
+/*ログインボタンの装飾*/
+#button-blue{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	float:left;
+	width: 100%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+  background-color: green;
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: green;
+}
+	
+.submit:hover {
+	color: green;
+}
+	
+.ease {
+	width: 0px;
+	height: 74px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color: beige;
+}
+
+
+/*ログインエラーの時の表示メッセージ*/
+.errorMsg{
+  margin-top: 50px;
+  border: orange solid 5px;
+}
+
+/*ポップアップ*/
+.modal{
+	display: none;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+  width: 100%;
+}
+.modal__bg{
+	background: rgba(0,0,0,0.7);
+	height: 100vh;
+	position: absolute;
+	width: 100%;
+}
+.modal__content{
+	background: #fff;
+	left: 50%;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 60%;
+}
+
+/* 飛行機を飛ばす*/
+.planePath {
+  stroke: #D9DADA;
+  stroke-width: .1%;
+  stroke-width: .8%;
+  stroke-dasharray: 1% 2%;
+  stroke-linecap: round;
+  fill: none;
+}
+.fil1 {
+  fill: #D9DADA;
+}
+.fil2 {
+  fill: #C5C6C6;
+}
+.fil4 {
+  fill: #9D9E9E;
+}
+.fil3 {
+  fill: #AEAFB0;
+}
+
+@media all and (max-width: 1300px) {
+  .login{
+    width: 300px;
+    margin: 10% auto;
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .login{
+    width: 300px;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+  .js-modal{
+    font-size: 100%;
+  }
+}

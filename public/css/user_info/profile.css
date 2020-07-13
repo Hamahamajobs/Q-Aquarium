@@ -1,0 +1,160 @@
+.user_info h3{
+    border-left: 3px solid green ;
+    margin-top: 30px;
+    padding-left: 10px;
+  }
+.user_info p{
+  font-size: 150%;
+  margin-left: 3%;
+  margin-right: 3%;
+  border-left: 3px solid green ;
+  margin-top: 30px;
+  padding-left: 10px;
+}
+
+/*Ajaxでデータを読み込む質問選択ボタン */
+.questionListCategory{
+  display: inline-block;
+}
+
+/*Ajaxで読み込んだhtmlファイルへの処理 */
+.categoryButton{
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  background-color:#AAAAAA;
+  border: solid 2px green;
+  border-radius: 3px;
+  transition: .4s;
+  width:24%;
+  height:5%;
+  margin: 0 0 0 0;
+  font-size: 130%;
+  font: bold;
+}
+
+.categoryButton:hover {
+  background-color: green;
+  color: white;
+}
+
+.selected_category_detail{
+  border: solid 3px green;
+}
+
+.categoryActive {
+  background-color: green;
+  color: white;
+}
+
+.categoryDetail{
+  display: inline-block;
+  background-color: cornsilk;
+  font-size: 20px;
+  margin: 0 40% 30px 40%;
+}
+
+.allQuestionContents {
+  font-size: 150%;
+  word-break: break-all;
+  border-bottom: 3px solid grey ;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  padding-left:2%;
+  overflow: hidden;
+  width: 100%;
+
+}
+.allQuestionContents a {
+  color: darkslategray;
+}
+/*
+.text_overflow{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+*/
+
+.linkToNexrPage{
+  text-align: center;
+  font-size: 160%;
+}
+
+.questionContents{
+  font-size:20px;
+}
+
+
+
+.thereIsNoAnswers{
+  border: solid 2px green;
+  margin:  5% 5% 5% 5%;
+  padding: 5% 0;
+  text-align: center;
+  font-size: 150%;
+}
+
+/* レスポンシブに対応 */
+.bannerAdvertisingLinkInPC{
+  text-align: center;
+}
+.bannerAdvertisingLinkInTablet{
+  display: none;
+}
+
+
+
+/*画面の小さいPCやタブレットを想定*/
+@media all and (max-width: 1300px) {
+  #allPastQuestions,#unconfirmedAnswers,#allPastAnswers,#unconfirmedThanks{
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: white;
+    border: solid 2px green;
+    border-radius: 3px;
+    transition: .4s;
+    width:44%;
+    height:5%;
+    margin: 0 0 0 0;
+    font-size: 120%;
+    font: bold;
+  }
+  .categoryDetail{
+    display: block;
+    text-align: center;
+    width: 44%;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+  .bannerAdvertisingLinkInPC{
+    display: none;
+  }
+  .bannerAdvertisingLinkInTablet{
+    display: block;
+    text-align: center;
+  }
+  .question_category_parent{
+    margin-top:10%;
+  }  
+  
+}
+
+/* todo 複数のCSSを読み込んでいて、それらで各自@media all and (max-width: 750px){}を記述している場合はどうなってしまうのかしら？今のところ、きちんと動いているが、少し冗長かなとも思う。*/
+
+@media all and (max-width: 750px) {
+
+  .question_category_parent{
+    text-align: center;
+    margin: 0 0 0 0;
+  }
+  .bannerAdvertisingLinkInTablet{
+    display: none;
+}
+
+}

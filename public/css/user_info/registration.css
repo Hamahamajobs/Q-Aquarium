@@ -1,0 +1,199 @@
+/*hina.ccsをカスタマイズ*/
+.containerPerPage{
+  width: 100%;
+}
+
+.side_bar{
+  display: none;
+}
+
+.registrationFormWrapper{
+	position: relative;
+}
+
+
+.registrationImages{
+	position: absolute;
+	display: inline-block;
+	width: 33px;
+	height: 33px;
+	top: 14%;
+	left:2%;
+	text-align: center;
+}
+
+
+
+
+#form-main{
+	width:100%;
+	float:left;
+	padding-top:0px;
+}
+
+#form-div {
+	background-color:rgba(72,72,72,0.4);
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:35px;
+	padding-bottom:50px;
+	width: 450px;
+  float: left;
+  /*hamada 画面調節のために50→52に変更*/
+	left: 52%;
+	position: absolute;
+  margin-top:30px;
+	margin-left: -260px;
+
+}
+
+.feedback-input {
+	color:#3c3c3c;
+	font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+  transition: 0.4s;
+}
+
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid green;
+	color: green;
+	outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+
+input:hover,
+input:focus{
+	background-color:white;
+}
+
+#button-blue{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	float:left;
+	width: 100%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: green;
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: green;
+}
+	
+.submit:hover {
+	color: green;
+}
+	
+.ease {
+	width: 0px;
+	height: 74px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+
+
+/*ポップアップ*/
+.modal{
+	display: none;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.modal__bg{
+	background: rgba(0,0,0,0.7);
+	height: 100vh;
+	position: absolute;
+	width: 100%;
+}
+.modal__content{
+	background: #fff;
+	left: 50%;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 60%;
+	text-align: center;
+	font-size: 150%;
+}
+#registrationSendQuestionBtn{
+	display: inline-block;
+	background-color: green;
+	color: white;
+	border: 3px solid green;
+	border-radius: 4px;
+	padding: 5px 10px;
+	margin-top: 5px;
+	transition: .4s ;
+
+}
+#registrationSendQuestionBtn:hover{
+	display: inline-block;
+	background-color: #fff;
+	color: green;
+	font: bold;
+}
+@media only screen and (max-width: 1300px) {
+	#form-div{
+		left: 25%;
+		margin-right: 3%;
+		width: 50%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+	.modal__content{
+		font-size: 130%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#form-div{
+		left: 15%;
+		margin-right: 3%;
+		width: 70%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+		margin-top:0;
+	}
+	.modal__content{
+		font-size: 110%;
+	}
+}
+

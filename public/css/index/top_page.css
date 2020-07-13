@@ -1,0 +1,288 @@
+/*hina.ccsをカスタマイズ*/
+/* 
+.background-pic{
+width: 100%;
+background-image: url('/../picture/Explain-pic7.png');
+background-size:cover;
+padding: 250px 0 250px 0;背景を写真にするときに、margin以外に貼り付けられるイメージである。そのためにここではmarginではなくpaddingを拡張している。拡張しているために画像がいい感じになる。
+color: white;
+text-align: center;
+border-bottom: solid 3px yellow;
+} */
+
+.question_category_parent{
+  position: relative;
+  /*戦歴：z-indexはposition:~~がないと機能しない。*/
+  /*z-index:10;*/
+}
+/*実験　2020/05/11*/
+#topPageImage{
+  width: 100%;
+  background-size:cover;
+  text-align: center;
+  background-repeat: no-repeat; /* 背景画像を繰り返し表示しません。 */
+  border-bottom: solid 3px yellow;
+}
+.topPicWrapper{
+  position: relative;
+}
+#topPagePicMesseges{
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 40%;
+  left: 0;
+  font-size: 400%;
+  text-align: center;
+  color: white;
+  letter-spacing: 6px;
+}
+@media all and (max-width: 1300px) {
+  #topPagePicMesseges{
+    width: 100%;
+    top: 40%;
+    font-size: 300%;
+    letter-spacing: 6px;
+  }
+}
+@media all and (max-width: 1000px) {
+  #topPagePicMesseges{
+    width: 100%;
+    top: 40%;
+    font-size: 260%;   
+    letter-spacing: 3px;
+  }
+}
+
+/*泡の作成*/
+.bubbles {
+  position: absolute;
+  width: 100%;
+  /*バブル群が表示されている空間のbottomはheightによって決まっている。しかしCSS公式によればheightは画面の横幅で決まってしまう(画面の縦幅に自動で合わせてくれない！)。このために、レイアウトを崩さないためにも自分でheightをある程度調節しないといけない。*/
+  /*height:50%;*/
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+  
+.bubble {
+  position: absolute;
+  bottom: -40;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  animation: bubble 10s ease-in infinite;
+}
+  
+.bubble:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  left: 30%;
+  animation-duration: 6s;
+}
+  
+.bubble:nth-child(2) {
+  left: 20%;
+  animation-duration: 3.5s;
+}
+  
+.bubble:nth-child(3) {
+  width: 30px;
+  height: 30px;
+  left: 30%;
+  animation-duration: 7s;
+}
+  
+.bubble:nth-child(4) {
+  width: 50px;
+  height: 50px;
+  left: 67%;
+  animation-duration: 6s;
+}
+  
+.bubble:nth-child(5) {
+  width: 20px;
+  height: 20px;
+  left: 70%;
+  animation-duration: 4.5s;
+}
+.bubble:nth-child(6) {
+  width: 40px;
+  height: 40px;
+  left: 90%;
+  animation-duration: 9.2s;
+}
+.bubble:nth-child(7) {
+  width: 60px;
+  height: 60px;
+  left: 15%;
+  animation-duration: 6.5s;
+}
+
+  
+@keyframes bubble {
+  0% {
+    bottom: -100px;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    bottom: 1000px;
+  }
+}
+
+
+
+/*トップページの大きなメッセージ */
+.topPageMessage h1{
+opacity: 0.9;
+font-size: 47px;
+letter-spacing: 5px;
+}
+.topPageMessage p{
+opacity: 0.7;
+}
+
+/*Ajaxでデータを読み込む質問選択ボタン */
+.questionListCategory{
+  display: inline-block;
+  
+}
+
+/*Ajaxで読み込んだhtmlファイルへの処理 */
+.categoryButton{
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  background-color:#AAAAAA;
+  color: white;
+  border: solid 2px green;
+  border-radius: 3px;
+  transition: .4s;
+  width:18%;
+  height:5%;
+  margin: 0 0 0 0;
+  font: bold;
+  font-size: 135%;
+}
+
+.categoryButton:hover {
+  background-color: green;
+  color: white;
+
+}
+
+
+
+.selected_category_detail{
+  border: solid 3px green;
+}
+
+.categoryActive {
+  background-color: green;
+  color: white;
+}
+
+.categoryDetail{
+  display: block;
+  text-align: center;
+  width: 200px;
+  padding:10px 10px;
+  margin: 0 auto;
+  
+  background-color: cornsilk;
+  font-size: 20px;
+}
+
+
+/*Ajaxで読み込む”質問”に対してのスタイルシート
+  Ajaxde読み込んだ追加要素に対しては読み込んだ先でCSSSを適応させる必要がある。
+　少し間借りさせて！*/
+
+.allQuestionContents {
+  padding-left:2%;
+  font-size: 150%;
+  word-break: break-all;
+  border-bottom: 3px solid grey ;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  
+}
+.allQuestionContents a {
+  color: darkslategray;
+
+}
+
+.questionDetail{
+  margin-top: 30px;
+  border-left: 3px solid saddlebrown ;
+  padding-left: 10px;
+}
+.linkToNexrPage{
+  text-align: center;
+  font-size: 160%;
+}
+
+.questionContents{
+  font-size:20px;
+}
+.forAdjustWithBR{
+  display: block;
+}
+
+@media all and (max-width: 750px) {
+
+  /* スマホの時は写真＋バブルは表示させない */
+  .background-pic{
+    display: none;
+  }
+  .topPicWrapper{
+    display: none;
+  }
+  .question_category_parent{
+    margin-top: -50px;
+  }
+  .forAdjustWithBR{
+    display: none;
+  }
+  /*トップページでのカテゴリー選択ボタンの調節*/
+  .categoryButton{
+    display: inline-block;
+    padding: 0.2em 0.2em;
+    border-radius: 3px;
+    transition: .4s;
+    width:20%;
+    height:5%;
+    margin: 0 -0.15em;
+    font-size: 120%;
+  }
+  #categoryLatest{
+    margin-left: 0.01em;
+
+  }
+}
+
+@media all and (max-width: 430px) {
+
+  .categoryButton{
+    display: inline-block;
+    padding: 0.2em 0.2em;
+    border-radius: 3px;
+    transition: .4s;
+    width:18%;
+    height:5%;
+    margin: 0 -0.15em;
+    font-size: 100%;
+  }
+
+
+}
+
+
+
+
+

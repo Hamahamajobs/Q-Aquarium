@@ -1,0 +1,33 @@
+.allQuestionContents {
+    font-size: 150%;
+    word-break: break-all;
+    border-bottom: 3px solid grey ;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+  }
+  .allQuestionContents a {
+    color: blue;
+  
+  }
+  
+  .questionDetail{
+    margin-top: 30px;
+    border-left: 3px solid saddlebrown ;
+    padding-left: 10px;
+  }
+  .linkToNexrPage{
+    text-align: center;
+    font-size: 160%;
+  }
+  
+  .questionContents{
+    font-size:20px;
+  }
+  
+  .resultIsEmpty{
+    font-size: 240%;
+    margin: 5% 5% 5% 5%;
+    border: 3px solid green ;
+    text-align: center;
+    
+  }
